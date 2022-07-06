@@ -19,6 +19,11 @@ networks:
 
 volumes:
   fate_flow_logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: <path-to-host-dir>/examples
   download_dir:
   shared_dir_examples:
     driver: local
